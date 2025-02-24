@@ -1,3 +1,14 @@
+# Proyecto Pig Game
+
+Esta es mi aplicación del juego Pig.
+
+## Enlace a la app en vivo
+
+[Ver la aplicación en vivo](https://juan1969gudrul.github.io/pig-game-react)
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
