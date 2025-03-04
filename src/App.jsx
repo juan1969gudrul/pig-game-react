@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 
+/**
+ * @component DiceGame
+ * @description Un juego de dados para dos jugadores donde cada jugador tira un dado y acumula puntos.
+ * Si sale 1, pierde todos los puntos acumulados en ese turno. El primer jugador en llegar a 100 puntos gana.
+ * @returns {JSX.Element} El componente del juego de dados
+ */
 const DiceGame = () => {
   // Estado que guarda las puntuaciones de ambos jugadores
   const [score, setScore] = useState([0, 0]);
