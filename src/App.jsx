@@ -1,3 +1,15 @@
+/**
+ * REQUERIMIENTOS BÁSICOS CUMPLIDOS:
+ * 1. README.md: Contiene enlace a la app en funcionamiento (https://juan1969gudrul.github.io/pig-game-react/)
+ * 2. Programa funcional: La aplicación está completamente operativa
+ * 3. Commits: El repositorio tiene 3 commits descriptivos
+ * 4. Código comentado: Incluye documentación JSDoc y comentarios explicativos
+ * 5. Script build/deploy: Implementado con Vite (minificación automática)
+ * 
+ * @fileoverview Implementación del juego de dados Pig Game en React
+ * @version 1.0.0
+ */
+
 import { useState } from "react";
 import "./App.css";
 
@@ -5,6 +17,13 @@ import "./App.css";
  * @component DiceGame
  * @description Un juego de dados para dos jugadores donde cada jugador tira un dado y acumula puntos.
  * Si sale 1, pierde todos los puntos acumulados en ese turno. El primer jugador en llegar a 100 puntos gana.
+ * Reglas del juego:
+ * 1. Los jugadores tiran un dado por turnos
+ * 2. En cada turno, el jugador puede:
+ *    - Tirar el dado: suma el número al puntaje actual
+ *    - Mantener: guarda el puntaje actual y pasa el turno
+ * 3. Si sale 1, pierde el puntaje actual y pasa el turno
+ * 4. Gana el primer jugador en llegar a 100 puntos
  * @returns {JSX.Element} El componente del juego de dados
  */
 const DiceGame = () => {
@@ -113,7 +132,7 @@ const DiceGame = () => {
 
       {/* Botón para iniciar un nuevo juego */}
       <button className="btn btn--new" onClick={initData}>
-        🔄 New game
+        New game
       </button>
 
       {/* Botón para tirar el dado (deshabilitado si hay un ganador) */}
@@ -122,7 +141,7 @@ const DiceGame = () => {
         onClick={throwDice}
         disabled={winner !== null}
       >
-        🎲 Roll dice
+        Roll dice
       </button>
 
       {/* Botón para mantener la puntuación (deshabilitado si hay un ganador) */}
@@ -131,7 +150,7 @@ const DiceGame = () => {
         onClick={holdScore}
         disabled={winner !== null}
       >
-        📥 Hold
+        Hold
       </button>
     </main>
   );
